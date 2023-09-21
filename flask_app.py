@@ -1,5 +1,7 @@
 from flask import Flask
-app =
+app = Flask(__name__)
+if __name__ == '_main_':
+    app.run(port=5000,debug=True)
 @app.route('/')
 def home():
-    return "<p>Hello world!</p>"
+    return "<p>Hallo en welkom</p>"
